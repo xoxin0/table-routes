@@ -1,0 +1,66 @@
+.table-container {
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+.routes-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+
+  th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    color: #333;
+    position: relative;
+
+    &.sortable {
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #e8e8e8;
+      }
+    }
+  }
+
+  .sort-icon {
+    margin-left: 8px;
+    font-size: 14px;
+    opacity: 0.6;
+  }
+
+  tr {
+    &:hover {
+      background-color: #f9f9f9;
+    }
+
+    &:last-child td {
+      border-bottom: none;
+    }
+  }
+
+  td {
+    color: #555;
+  }
+}
+
+@media (max-width: 768px) {
+  .routes-table {
+    font-size: 14px;
+
+    th, td {
+      padding: 8px 12px;
+    }
+  }
+}

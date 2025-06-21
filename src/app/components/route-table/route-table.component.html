@@ -1,0 +1,27 @@
+<div class="table-container">
+  <table class="routes-table">
+    <thead>
+      <tr>
+        <th class="sortable" (click)="sort('address')">
+          Адрес назначения
+          <span class="sort-icon">{{ getSortIcon('address') }}</span>
+        </th>
+        <th class="sortable" (click)="sort('gateway')">
+          Шлюз
+          <span class="sort-icon">{{ getSortIcon('gateway') }}</span>
+        </th>
+        <th class="sortable" (click)="sort('interface')">
+          Интерфейс
+          <span class="sort-icon">{{ getSortIcon('interface') }}</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let route of routes">
+        <td>{{ route.address }}/{{ route.mask }}</td>
+        <td>{{ route.gateway }}</td>
+        <td>{{ route.interface }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

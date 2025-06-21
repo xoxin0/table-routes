@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouteTableComponent } from './components/route-table/route-table.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [
+    RouteTableComponent
+  ],
+  styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-  title = 'table-routes';
+  title = 'route-table-app';
 }
